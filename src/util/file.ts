@@ -29,7 +29,7 @@ const getFileType = async(path: string) => {
     try {
         const fileStat = await stat(path)
         return fileStat.isDirectory() ? 'directory' : 'file'
-    } catch (err) {
+    } catch (err) { // eslint-disable-line @typescript-eslint/no-unused-vars
         return 'missing'
     }
 }
